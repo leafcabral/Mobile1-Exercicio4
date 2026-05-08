@@ -1,5 +1,11 @@
 <resources>
 	<string name="app_name">Tasks</string>
 
-	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="input_email_label">E-mail</string>
+	<string name="input_email_placeholder">Digite seu e-mail</string>
+	<string name="input_senha_label">Senha</string>
+	<string name="input_senha_placeholder">Digite sua senha</string>
+	<string name="input_login">Login</string>
+	<string name="input_conta_criar">Criar Conta</string>
+	<string name="input_conta_recuperar">Recuperar Conta</string>
 </resources>
