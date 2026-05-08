@@ -56,8 +56,9 @@
 			android:layout_height="wrap_content"
 			android:text="@string/input_login"
 			android:textColor="@color/white"
+			android:background="@drawable/bt_btn"
 			app:backgroundTint="@color/primary"
-			android:layout_marginTop="16dp"/>
+			android:layout_marginTop="24dp"/>
 
 		<LinearLayout
 			android:layout_width="match_parent"
