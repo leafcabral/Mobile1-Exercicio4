@@ -8,4 +8,5 @@
 	<string name="input_login">Login</string>
 	<string name="input_conta_criar">Criar Conta</string>
 	<string name="input_conta_recuperar">Recuperar Conta</string>
+	<string name="info_recoverAccount">Informe seu e-mail de cadastro para receber um link para alteração de senha.</string>
 </resources>

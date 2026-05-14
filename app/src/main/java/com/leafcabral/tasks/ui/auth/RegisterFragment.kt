@@ -6,19 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.leafcabral.tasks.R
-import com.leafcabral.tasks.databinding.FragmentLoginBinding
 import com.leafcabral.tasks.databinding.FragmentRegisterBinding
 
-class LoginFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
-	private var _binding: FragmentLoginBinding? = null
+	private var _binding: FragmentRegisterBinding? = null
 	private val binding get() = _binding!!
 
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View {
-		_binding = FragmentLoginBinding.inflate(inflater, container, true)
+		_binding = FragmentRegisterBinding.inflate(inflater, container, true)
 		return binding.root
 	}
 }
