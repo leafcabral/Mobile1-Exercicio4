@@ -84,7 +84,9 @@
 				android:layout_height="wrap_content"
 				android:indeterminateTint="@color/primary"
 				android:layout_gravity="center"
-				android:layout_marginTop="20dp"/>
+				android:layout_marginTop="20dp"
+				tools:visibility="visible"
+				android:visibility="invisible"/>
 		</LinearLayout>
 	</LinearLayout>
 
