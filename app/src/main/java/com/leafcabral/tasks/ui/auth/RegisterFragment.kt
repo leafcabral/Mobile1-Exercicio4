@@ -17,7 +17,7 @@ class RegisterFragment : Fragment() {
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View {
-		_binding = FragmentRegisterBinding.inflate(inflater, container, true)
+		_binding = FragmentRegisterBinding.inflate(inflater, container, false)
 		return binding.root
 	}
 }

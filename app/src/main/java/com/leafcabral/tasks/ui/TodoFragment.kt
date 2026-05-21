@@ -6,13 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.leafcabral.tasks.R
+import com.leafcabral.tasks.databinding.FragmentDoingBinding
+import com.leafcabral.tasks.databinding.FragmentTodoBinding
 
 
 class TodoFragment : Fragment() {
+
+	private var _binding: FragmentTodoBinding? = null
+	private val binding get() = _binding!!
+
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
-	): View? {
-		return inflater.inflate(R.layout.fragment_todo, container, false)
+	): View {
+		_binding = FragmentTodoBinding.inflate(inflater, container, false)
+		return binding.root
+	}
+
+	override fun onDestroyView() {
+		super.onDestroyView()
+		_binding = null
 	}
 }
