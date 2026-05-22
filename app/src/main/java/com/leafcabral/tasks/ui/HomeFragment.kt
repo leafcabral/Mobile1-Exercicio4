@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.leafcabral.tasks.R
 import com.leafcabral.tasks.databinding.FragmentDoingBinding
 import com.leafcabral.tasks.databinding.FragmentHomeBinding
+import com.leafcabral.tasks.ui.adapter.ViewPagerAdapter
 
 
 class HomeFragment : Fragment() {
@@ -23,8 +26,29 @@ class HomeFragment : Fragment() {
 		return binding.root
 	}
 
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		super.onViewCreated(view, savedInstanceState)
+		initTabs()
+	}
+
 	override fun onDestroyView() {
 		super.onDestroyView()
 		_binding = null
+	}
+
+
+	fun initTabs() {
+		val pageAdapter = ViewPagerAdapter(requireActivity())
+		binding.viewPager.adapter = pageAdapter
+
+		pageAdapter.addFragment(TodoFragment(), R.string.status_task_todo)
+		pageAdapter.addFragment(TodoFragment(), R.string.status_task_doing)
+		pageAdapter.addFragment(TodoFragment(), R.string.status_task_done)
+
+		binding.viewPager.offscreenPageLimit = pageAdapter.itemCount
+
+		TabLayoutMediator(binding.tabs, binding.viewPager) { tab, position ->
+			tab.text = getString(pageAdapter.getTitle(position))
+		}.attach()
 	}
 }
