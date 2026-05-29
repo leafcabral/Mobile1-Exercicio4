@@ -13,4 +13,5 @@
 	<string name="status_task_todo">A Fazer</string>
 	<string name="status_task_doing">Fazendo</string>
 	<string name="status_task_done">Feitas</string>
+	<string name="app_creator">Rafael Cabral Lopes</string>
 </resources>
